@@ -1,6 +1,8 @@
 <h1 class="text-center mt-5">Mix your doses and Ingredients</h1>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
+<div class="container">
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -9,3 +11,4 @@
     <%= f.submit %>
 
 <% end %>
+</div>

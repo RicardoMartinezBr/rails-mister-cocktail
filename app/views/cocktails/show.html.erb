@@ -5,13 +5,13 @@
 
 <% @cocktail.doses.each do |dose| %>
 
-  <h2><%= dose.description %> <%= dose.ingredient %></h2>
+  <h2 class="text-center mt-5"><%= dose.description %> <%= dose.ingredient %></h2>
 
 
 <% end %>
 
 
-<%= link_to "doses", new_cocktail_dose_path(@cocktail)  %>
+<p class="text-center mt-5"> <%= link_to "Add Dose", new_cocktail_dose_path(@cocktail)  %> |
 
-<p class="text-center mt-5"><%= link_to "Back to Cocktails", cocktails_path %></p>
+<%= link_to "Back to Cocktails", cocktails_path %></p>
 

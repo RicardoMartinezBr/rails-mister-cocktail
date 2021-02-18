@@ -9,7 +9,7 @@ class DosesController < ApplicationController
   # end
 
   def new
-    @dose = Cocktail.find(params[:cocktail_id)
+    @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new
   end
 
@@ -42,15 +42,15 @@ class DosesController < ApplicationController
   #   redirect_to doses_path, notice: 'Dose was successfully destroyed.'
   # end
 
-  # private
+  private
 
   #   def set_dose
   #       @dose = Dose.find(params[:id])
   #   end
 
-  #   def dose_params
-  #     params.require(:dose).permit(:description, :ingredient_id)
-  #   end
+    def dose_params
+      params.require(:dose).permit(:description, :ingredient_id)
+    end
 
 
 end
