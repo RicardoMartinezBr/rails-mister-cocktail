@@ -1,0 +1,17 @@
+
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1725&q=80)">
+  <h1><%= @cocktail.name %></h1>
+</div>
+
+<% @cocktail.doses.each do |dose| %>
+
+  <h2><%= dose.description %> <%= dose.ingredient %></h2>
+
+
+<% end %>
+
+
+<%= link_to "doses", new_cocktail_dose_path(@cocktail)  %>
+
+<p class="text-center mt-5"><%= link_to "Back to Cocktails", cocktails_path %></p>
+
