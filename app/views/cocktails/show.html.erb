@@ -5,7 +5,7 @@
 
 <% @cocktail.doses.each do |dose| %>
 
-  <h2 class="text-center mt-5"><%= dose.description %> <%= dose.ingredient %></h2>
+  <h2 class="text-center mt-5"><%= dose.description %> <%= dose.ingredient.name %></h2>
 
 
 <% end %>
