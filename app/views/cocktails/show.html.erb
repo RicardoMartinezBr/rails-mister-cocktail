@@ -5,8 +5,8 @@
 
 <div class="container shadow rounded py-3 mt-3">
   <div class="d-flex">
-    <% @cocktail.doses.each do |dose| %>
     <div class="rounded"><%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %></div>
+    <% @cocktail.doses.each do |dose| %>
       <div class="pl-3">
         <h4>Description</h4> <p> <%= dose.description %></p>
         <h4 class="pt-1" >Ingredients</h4>
