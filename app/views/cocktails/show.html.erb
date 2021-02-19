@@ -3,15 +3,20 @@
   <h1><%= @cocktail.name %></h1>
 </div>
 
-<% @cocktail.doses.each do |dose| %>
+<div class="container shadow rounded py-3 mt-3">
+  <div class="d-flex">
+    <% @cocktail.doses.each do |dose| %>
+    <div class="rounded"><%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %></div>
+      <div class="pl-3">
+        <h4>Description</h4> <p> <%= dose.description %></p>
+        <h4 class="pt-1" >Ingredients</h4>
+        <p><%= dose.ingredient.name %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-  <h2 class="text-center mt-5"><%= dose.description %> <%= dose.ingredient.name %></h2>
 
-
-<% end %>
-
-
-<p class="text-center mt-5"> <%= link_to "Add Dose", new_cocktail_dose_path(@cocktail)  %> |
+<p class="text-center mt-5"> <%= link_to "Add Dose", new_cocktail_dose_path(@cocktail) %> |
 
 <%= link_to "Back to Cocktails", cocktails_path %></p>
-
